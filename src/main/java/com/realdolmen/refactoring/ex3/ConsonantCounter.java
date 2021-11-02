@@ -1,8 +1,5 @@
 package com.realdolmen.refactoring.ex3;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class ConsonantCounter {
     int countUnique(String word) {
         if(!isAWord(word)){
