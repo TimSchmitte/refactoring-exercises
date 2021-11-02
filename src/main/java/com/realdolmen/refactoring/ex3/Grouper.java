@@ -18,7 +18,6 @@ public class Grouper {
             wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (value1, value2)
                 -> concat(value1.stream(), value2.stream()).collect(Collectors.toList()));
         }
-
         return wordsByAmountOfUniqueCharacters;
     }
 }
