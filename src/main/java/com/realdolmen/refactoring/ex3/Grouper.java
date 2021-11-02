@@ -14,12 +14,9 @@ public class Grouper {
     public Map<Integer, List<String>> groupByAmountOfUniqueConsonants(List<String> words){
         Map<Integer, List<String>> wordsByAmountOfUniqueCharacters = new HashMap<>();
         for (String word : words) {
-
             int u = consonantCounter.countUnique(word);
-
             wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (value1, value2)
                 -> concat(value1.stream(), value2.stream()).collect(Collectors.toList()));
-
         }
 
         return wordsByAmountOfUniqueCharacters;
