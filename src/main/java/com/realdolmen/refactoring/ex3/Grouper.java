@@ -1,6 +1,9 @@
 package com.realdolmen.refactoring.ex3;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Stream.concat;
 
 public class Grouper {
     public Map<Integer, List<String>> groupByAmountOfUniqueConsonants(List<String> words){
@@ -23,16 +26,8 @@ public class Grouper {
                 }
 
             }
-            wordsByAmountOfUniqueCharacters.compute(u, (key, value) -> {
-                if (value == null) {
-                    return List.of(word);
-                }else {
-                    List<String> res = new ArrayList<>(value);
-                    res.add(word);
-                    return res;
-                }
-            });
-
+            wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (value1, value2)
+                -> concat(value1.stream(), value2.stream()).collect(Collectors.toList()));
         }
 
         return wordsByAmountOfUniqueCharacters;
