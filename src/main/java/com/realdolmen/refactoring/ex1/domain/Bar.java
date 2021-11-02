@@ -1,9 +1,9 @@
-package com.realdolmen.refactoring.ex1;
+package com.realdolmen.refactoring.ex1.domain;
 
-public class Foo {
+public class Bar {
     private String baz;
 
-    public Foo(String baz) {
+    public Bar(String baz) {
         this.baz = baz;
     }
 

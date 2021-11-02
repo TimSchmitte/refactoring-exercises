@@ -7,7 +7,7 @@ public class Grouper {
         Map<Integer, List<String>> wordsByAmountOfUniqueCharacters = new HashMap<>();
         for (String word : words) {
 
-            if(!word.matches("^[a-zA-Z]+$")){
+            if(!isAWord(word)){
                 throw new IllegalArgumentException(word + "is not a single word!");
             }
             Set<Character> chars = new HashSet<>();
@@ -15,7 +15,7 @@ public class Grouper {
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
 
-                if(c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y' && c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U' && c != 'Y'){
+                if(isAVowel(c)){
                     if(!chars.contains(c)){
                         chars.add(c);
                         u++;
@@ -36,6 +36,14 @@ public class Grouper {
         }
 
         return wordsByAmountOfUniqueCharacters;
+    }
+
+    private static boolean isAVowel(char c) {
+        return c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y' && c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U' && c != 'Y';
+    }
+
+    private boolean isAWord(String word) {
+        return word.matches("^[a-zA-Z]+$");
     }
 
 }

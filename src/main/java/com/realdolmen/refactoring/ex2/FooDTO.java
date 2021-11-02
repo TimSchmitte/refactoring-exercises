@@ -1,13 +1,16 @@
 package com.realdolmen.refactoring.ex2;
 
-public class FooDTO {
-    private String bar;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    public FooDTO(String bar) {
-        this.bar = bar;
+public class FooDTO {
+    private String baz;
+
+    public FooDTO(String baz) {
+        this.baz = baz;
     }
 
-    public String getBar() {
-        return bar;
+    @JsonProperty("bar")
+    public String getBaz() {
+        return baz;
     }
 }
