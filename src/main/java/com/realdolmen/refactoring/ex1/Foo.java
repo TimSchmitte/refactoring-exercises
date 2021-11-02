@@ -1,11 +1,13 @@
 package com.realdolmen.refactoring.ex1;
 
 public class Foo {
-    private String bar;
+    private String baz;
 
-    public Foo(String bar) {
-        this.bar = bar;
+    public Foo(String baz) {
+        this.baz = baz;
     }
 
-
+    public String getBaz() {
+        return baz;
+    }
 }
