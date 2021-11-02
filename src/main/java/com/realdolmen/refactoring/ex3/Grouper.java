@@ -15,7 +15,7 @@ public class Grouper {
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
 
-                if(isAVowel(c)){
+                if(c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y' && c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U' && c != 'Y'){
                     if(!chars.contains(c)){
                         chars.add(c);
                         u++;
@@ -38,7 +38,4 @@ public class Grouper {
         return wordsByAmountOfUniqueCharacters;
     }
 
-    private static boolean isAVowel(char c) {
-        return c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y' && c != 'A' && c != 'E' && c != 'I' && c != 'O' && c != 'U' && c != 'Y';
-    }
 }
