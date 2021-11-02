@@ -16,3 +16,4 @@ Let's see if we can improve on this code by refactoring.
 * Make a "ConsonantCounter" class to which you move the method.
 * Write a test for the ConsonantCounter
 * Refactor the method to use java 8 streams
+4. Optional: also change the remaining code in the Grouper to use java 8 streams.
