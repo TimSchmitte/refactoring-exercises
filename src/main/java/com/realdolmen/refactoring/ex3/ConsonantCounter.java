@@ -8,7 +8,6 @@ public class ConsonantCounter {
         if(!isAWord(word)){
             throw new IllegalArgumentException(word + "is not a single word!");
         }
-        Set<Character> chars = new HashSet<>();
 
         return (int)word.chars().mapToObj(c -> (char)c)
             .filter(c1 -> !CharacterUtils.isAVowel(c1))
