@@ -9,7 +9,7 @@ import java.util.Map;
 public class GrouperTest {
     @Test
     void validInput() {
-        Grouper grouper = new Grouper();
+        Grouper grouper = new Grouper(new ConsonantCounter());
         List<String> words = List.of("Refactoring", "A", "Never", "ending", "journey", "towards", "perfection");
         Map<Integer, List<String>> wordsByAmountOfUniqueConsonants = grouper.groupByAmountOfUniqueConsonants(words);
 
@@ -26,7 +26,7 @@ public class GrouperTest {
 
     @Test
     void invalidWord() {
-        Grouper grouper = new Grouper();
+        Grouper grouper = new Grouper(new ConsonantCounter());
         List<String> words = List.of("Refactoring", "A Never-ending journey towards perfection");
 
         Assertions.assertThatThrownBy(() ->grouper.groupByAmountOfUniqueConsonants(words));
@@ -35,7 +35,7 @@ public class GrouperTest {
 
     @Test
     void testVowels(){
-        Grouper grouper = new Grouper();
+        Grouper grouper = new Grouper(new ConsonantCounter());
         Assertions.assertThat(grouper.groupByAmountOfUniqueConsonants(List.of("abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
             .containsEntry(20, List.of("abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
     }
