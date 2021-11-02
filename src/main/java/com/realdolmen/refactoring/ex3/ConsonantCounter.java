@@ -9,19 +9,11 @@ public class ConsonantCounter {
             throw new IllegalArgumentException(word + "is not a single word!");
         }
         Set<Character> chars = new HashSet<>();
-        int u = 0;
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
 
-            if(!CharacterUtils.isAVowel(c)){
-                if(!chars.contains(c)){
-                    chars.add(c);
-                    u++;
-                }
-            }
-
-        }
-        return u;
+        return (int)word.chars().mapToObj(c -> (char)c)
+            .filter(c1 -> !CharacterUtils.isAVowel(c1))
+            .distinct()
+            .count();
     }
     private boolean isAWord(String word) {
         return word.matches("^[a-zA-Z]+$");
