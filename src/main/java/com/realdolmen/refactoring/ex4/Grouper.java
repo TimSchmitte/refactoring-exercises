@@ -1,8 +1,9 @@
-package com.realdolmen.refactoring.ex3;
+package com.realdolmen.refactoring.ex4;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.*;
 import static java.util.stream.Stream.concat;
 
 public class Grouper {
@@ -26,8 +27,8 @@ public class Grouper {
                 }
 
             }
-            wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (value1, value2)
-                -> concat(value1.stream(), value2.stream()).collect(Collectors.toList()));
+            wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (origWords, newWords)
+                -> concat(origWords.stream(), newWords.stream()).collect(toList()));
         }
 
         return wordsByAmountOfUniqueCharacters;
