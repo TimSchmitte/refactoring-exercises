@@ -1,0 +1,21 @@
+#Exercise 5: Refactoring type hierarchies
+This animal simulation program currently only has 1 type of animal, 
+let's try to add new animals and share behavior between them using inheritance and delegation.
+1. Let's start by adding a dog, the dog can ingest and digest but cannot fly, additionally he can bark.
+   1. Extract an Animal superclass from the Pigeon class using the "Extract Superclass" refactoring, 
+   make sure your caret is somewhere inside the Pigeon class; make sure to tick the checkboxes in the wizard 
+   for the 'ingest' and 'digest' methods
+   2. Once the superclass is created go to it and 'alt+enter' with your caret on the class' name(Animal) ;
+   the menu that appears should allow you to create a subclass, name it Dog
+   3. Add the suckle method to it, the implementation is less important for this exercise
+   4. Add the bark method to it, the implementation is less important for this exercise
+2. Now add the Bat class, the bat is a mammal and can suckle like the dog but it cannot bark so let's introduce 
+a new Intermediate class 'Mammal'. 
+   1. Use the same procedure as above to introduce the Mammal and the Bat Class(no need to add any additional methods yet).
+3. The bat can also fly like the pigeon though. Since the Bat class already extends Mammal and java does not support multiple inheritance
+   we cannot use inheritance to share the flying behavior with the pigeon. We can mimic traits though in java by using interfaces and delegates. 
+   1. First create an interface "Flying" using the "Extract Interface" refactoring in the Pigeon class; pulling up the members
+         "fly" and "getKmFlown".
+   2. Now go back to the Pigeon class and use the "extract delegate" refactoring, selecting the same methods, 
+   note that you will also have to select the corresponding fields, let's call the class "FlyingAnimal".
+   3. Make the bat also implement the Flying interface and delegate the methods to an instance of "FlyingAnimal"

@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex3;
+package com.realdolmen.refactoring.ex4;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -3,6 +3,8 @@ package com.realdolmen.refactoring.ex3;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Stream.concat;
+
 public class Grouper {
     private ConsonantCounter consonantCounter;
 
