@@ -9,7 +9,7 @@ Let's see if we can improve on this code by refactoring.
 2. The vowel check 
 * Extract the code responsible for checking whether a character is a vowel from the count.
 * Make the method static and move it to a util class.
-* Write a test for the code in 'b' 
+* Write a test for the new method.
 * Adapt the code to make it more readable, make sure the test stays green.
 3. Consonant counter
 * Extract the code that counts the amount of unique consonants per word into a regular method.
