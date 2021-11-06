@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex3;
+package com.realdolmen.refactoring.ex4;
 
 public class ConsonantCounter {
     int countUnique(String word) {

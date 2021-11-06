@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex3;
+package com.realdolmen.refactoring.ex4;
 
 import java.util.Set;
 
