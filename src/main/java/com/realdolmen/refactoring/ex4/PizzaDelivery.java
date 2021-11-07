@@ -1,9 +1,5 @@
 package com.realdolmen.refactoring.ex4;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class PizzaDelivery {
     int numberOfLateDeliveries;
 
@@ -12,10 +8,7 @@ public class PizzaDelivery {
     }
 
     public int getRating() {
-        return moreThanFiveLateDeliveries() ? 2 : 1;
+        return numberOfLateDeliveries > 5 ? 2 : 1;
     }
 
-    private boolean moreThanFiveLateDeliveries() {
-        return numberOfLateDeliveries > 5;
-    }
 }

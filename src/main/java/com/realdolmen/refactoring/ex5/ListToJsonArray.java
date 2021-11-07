@@ -7,23 +7,25 @@ public class ListToJsonArray {
         List<String> words = List.of("Lorem", "ipsum", "dolor", "sit", "amet");
 
         String result = toJsonArray(words);
-        result = result.substring(0, result.length() - 1);
-        result = result + "]";
 
         System.out.println(result);
     }
 
-
-    private static String toJsonArray(List<String> strings){
+    private static String toJsonArray(List<String> words) {
         StringBuilder stringBuilder = new StringBuilder("[");
 
-        for (String s : strings) {
+        for (String s : words) {
             stringBuilder
                 .append("\"")
                 .append(s)
                 .append("\",");
         }
 
-        return stringBuilder.toString();
+        String result = stringBuilder.toString();
+        result = result.substring(0, result.length() - 1);
+        result = result + "]";
+        return result;
     }
+
+
 }
