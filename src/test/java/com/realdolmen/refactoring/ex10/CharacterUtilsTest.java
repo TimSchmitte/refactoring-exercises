@@ -1,6 +1,6 @@
-package com.realdolmen.refactoring.ex4;
+package com.realdolmen.refactoring.ex10;
 
-import com.realdolmen.refactoring.ex4.CharacterUtils;
+import com.realdolmen.refactoring.ex10.CharacterUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

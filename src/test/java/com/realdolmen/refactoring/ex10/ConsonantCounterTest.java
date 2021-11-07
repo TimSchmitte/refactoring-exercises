@@ -1,6 +1,6 @@
-package com.realdolmen.refactoring.ex4;
+package com.realdolmen.refactoring.ex10;
 
-import com.realdolmen.refactoring.ex4.ConsonantCounter;
+import com.realdolmen.refactoring.ex10.ConsonantCounter;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
