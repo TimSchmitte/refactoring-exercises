@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex5;
+package com.realdolmen.refactoring.ex11;
 
 public class Pigeon {
 

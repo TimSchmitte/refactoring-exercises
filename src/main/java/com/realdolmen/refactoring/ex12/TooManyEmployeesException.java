@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex6;
+package com.realdolmen.refactoring.ex12;
 
 public class TooManyEmployeesException extends RuntimeException {
 }

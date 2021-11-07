@@ -4,7 +4,7 @@ let's try to add new animals and share behavior between them using inheritance a
 1. Let's start by adding a dog, the dog can ingest and digest but cannot fly, additionally he can bark.
    1. Extract an Animal superclass from the Pigeon class using the "Extract Superclass" refactoring, 
    make sure your caret is somewhere inside the Pigeon class; make sure to tick the checkboxes in the wizard 
-   for the 'ingest' and 'digest' methods
+   for the 'ingest' and 'digest' methods. if you forget you can still pull them up using the "Pull methods up" refactoring.
    2. Once the superclass is created go to it and 'alt+enter' with your caret on the class' name(Animal) ;
    the menu that appears should allow you to create a subclass, name it Dog
    3. Add the suckle method to it, the implementation is less important for this exercise
