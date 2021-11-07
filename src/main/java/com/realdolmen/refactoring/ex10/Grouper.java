@@ -1,7 +1,6 @@
-package com.realdolmen.refactoring.ex4;
+package com.realdolmen.refactoring.ex10;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
 import static java.util.stream.Stream.concat;

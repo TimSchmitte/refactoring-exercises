@@ -1,10 +1,9 @@
-package com.realdolmen.refactoring.ex6;
+package com.realdolmen.refactoring.ex12;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
-import javax.sql.DataSource;
 import javax.transaction.Transactional;
 import java.util.List;
 
