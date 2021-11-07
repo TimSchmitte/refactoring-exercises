@@ -20,13 +20,13 @@ public class SideEffects {
         print(frequency);
     }
 
-    private static void print(Map<String, Long> frequency) {
-        System.out.println(frequency);
-    }
-
     private static void calculateWordFrequency(Map<String, Long> frequency, File filePath) throws FileNotFoundException {
         try (Stream<String> words = new Scanner(filePath).tokens()) {
             words.forEach(word -> frequency.merge(word.toLowerCase(), 1L, Long::sum));
         }
+    }
+
+    private static void print(Map<String, Long> frequency) {
+        System.out.println(frequency);
     }
 }
