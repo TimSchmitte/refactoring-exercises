@@ -1,39 +1,21 @@
 package com.realdolmen.refactoring.ex11;
 
-public class Pigeon {
+public class Pigeon extends Animal implements Flying {
 
-    private String stomachContents;
-    private final double flightSpeedPerHour;
-    private double kmFlown = 0.0;
+    private final Wings wings;
 
     public Pigeon(double flightSpeedPerHour) {
-        this.flightSpeedPerHour = flightSpeedPerHour;
+        this.wings  = new Wings(flightSpeedPerHour);
     }
 
+    @Override
     public void fly(double km){
-        System.out.println("flying " + km + "km, will arrive in " + km/flightSpeedPerHour + " hours"  );
-        kmFlown += km;
+        wings.fly(km);
     }
 
+    @Override
     public double getKmFlown() {
-        return kmFlown;
-    }
-
-    public void ingest(String consumable) {
-        if (stomachContents == null) {
-            stomachContents = consumable;
-            System.out.println("ingest " + consumable);
-        } else {
-            throw new StomachFullException();
-        }
-    }
-
-    public void digest() {
-        if (stomachContents == null) {
-            throw new NothingToDigestException();
-        }
-        System.out.println("digested " + stomachContents);
-        stomachContents = null;
+        return wings.getKmFlown();
     }
 
     public String getStomachContents() {
