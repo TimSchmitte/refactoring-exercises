@@ -9,7 +9,6 @@ public class FooDTO {
         this.baz = baz;
     }
 
-    @JsonProperty("bar")
     public String getBaz() {
         return baz;
     }
