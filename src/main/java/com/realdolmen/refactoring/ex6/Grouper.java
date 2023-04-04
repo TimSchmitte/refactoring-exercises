@@ -1,4 +1,4 @@
-package com.realdolmen.refactoring.ex10;
+package com.realdolmen.refactoring.ex6;
 
 import java.util.*;
 
