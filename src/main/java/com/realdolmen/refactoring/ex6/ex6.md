@@ -7,7 +7,7 @@ Let's see if we can improve on this code by refactoring.
 
 1. Extract the piece of code responsible for validating that the given strings are words into a method.
 2. The vowel check 
-* Extract the code responsible for checking whether a character is a vowel from the count.
+* Extract the code responsible for checking whether a character is a consonant into a method.
 * Make the method static and move it to a util class.
 * Write a test for the new method.
 * Adapt the code to make it more readable, make sure the test stays green.
