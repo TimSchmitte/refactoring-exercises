@@ -1,17 +1,40 @@
 package com.realdolmen.refactoring.ex6;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
+
+import static java.util.stream.Collectors.*;
+import static java.util.stream.Stream.concat;
 
 public class Grouper {
-    private ConsonantCounter consonantCounter;
-
-    public Grouper(ConsonantCounter consonantCounter) {
-        this.consonantCounter = consonantCounter;
-    }
     public Map<Integer, List<String>> groupByAmountOfUniqueConsonants(List<String> words){
-        return words.stream()
-            .collect(Collectors.groupingBy(word -> consonantCounter.countUnique(word)));
+        Map<Integer, List<String>> wordsByAmountOfUniqueCharacters = new HashMap<>();
+        for (String word : words) {
+
+            if(!isWord(word)){
+                throw new IllegalArgumentException(word + "is not a single word!");
+            }
+            Set<Character> chars = new HashSet<>();
+            int u = 0;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+
+                if(ConsonantUtil.isAConsonant(c)){
+                    if(!chars.contains(c)){
+                        chars.add(c);
+                        u++;
+                    }
+                }
+
+            }
+            wordsByAmountOfUniqueCharacters.merge(u, List.of(word), (origWords, newWords)
+                -> concat(origWords.stream(), newWords.stream()).collect(toList()));
+        }
+
+        return wordsByAmountOfUniqueCharacters;
     }
+
+    private static boolean isWord(String word) {
+        return word.matches("^[a-zA-Z]+$");
+    }
+
 }
