@@ -1,4 +1,4 @@
-#Exercise 3: refactoring towards side effect free methods
+# Exercise 3: refactoring towards side effect free methods
 
 Side effects are common in OO languages; with a method with a side effect we mean a method which does something that is
 not immediately derivable from it's signature.
