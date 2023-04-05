@@ -1,4 +1,4 @@
-#Exercise 8: push members down/create subclass
+# Exercise 8: push members down/create subclass
 
 In this example we have a Superclass called Vehicle which was originally introduced to share behavior between Car and Truck.
 We would like to introduce a new Vehicle Type called bike now but notice that Vehicle currently has some members which do not make sense for a bike.

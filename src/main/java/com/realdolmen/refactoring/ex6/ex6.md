@@ -1,4 +1,4 @@
-#Exercise 6: extracting variables and methods
+# Exercise 6: extracting variables and methods
 
 Last year's junior prided himself on being able to write all his features in a single method. 
 After a year of zealously expressing his passion on the project he suddenly got a great opportunity 

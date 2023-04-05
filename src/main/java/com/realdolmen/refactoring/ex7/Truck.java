@@ -1,10 +1,12 @@
 package com.realdolmen.refactoring.ex7;
 
+import java.util.List;
+
 public class Truck {
-    private String make;
-    private String model;
-    private int year;
-    private double towingCapacity;
+    private final String make;
+    private final String model;
+    private final int year;
+    private final double towingCapacity;
 
     public Truck(String make, String model, int year, double towingCapacity) {
         this.make = make;
@@ -13,25 +15,31 @@ public class Truck {
         this.towingCapacity = towingCapacity;
     }
 
-    public double calculateFuelEfficiency() {
-        // code to calculate fuel efficiency
-        return 0.0;
-    }
-
-    public double calculateEmissions() {
-        // code to calculate emissions
-        return 0.0;
-    }
-
     public void accelerate() {
-        // code to accelerate
+        System.out.println("accelerating");
     }
 
     public void brake() {
-        // code to brake
+        System.out.println("braking");
     }
 
     public double getTowingCapacity() {
         return towingCapacity;
+    }
+
+    public List<String> getSupportedFuelTypes(){
+        return List.of("Diesel", "Gasoline", "LPG");
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
     }
 }
