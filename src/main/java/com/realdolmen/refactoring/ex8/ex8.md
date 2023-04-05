@@ -17,4 +17,4 @@ To work around this we can push these members down to the subclasses before intr
    This is a limitation of intellij. To alleviate this, manually copy the field assignments to the Car and Truck subclasses' constructors 
    and remove the unused field from the Vehicle class' constructor 
 2. Now create the new bike subclass, you can do this by pressing alt-enter on the Vehicle classname and selecting "Create Subclass" (or ctrl+shift+a ...)
-   3. The implementation is less important for this exercise but notice how Intellij automatically created a constructor matching the superclass and a stub for the accelerate method
+   1. The implementation is less important for this exercise but notice how Intellij automatically created a constructor matching the superclass and a stub for the accelerate method
