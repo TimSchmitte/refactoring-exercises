@@ -6,7 +6,7 @@ To work around this we can push these members down to the subclasses before intr
 
 
 1. Push down the "fuelCapacity" and "currentFuel" fields and the "refuel" method. 
-   1. Right-click somewhere inside the class -> refactor -> push members down or ctrl-shift-a and lookup the action
+   1. Right-click somewhere inside the class' body(not inside a method) -> refactor -> push members down or ctrl-shift-a and lookup the action
    2. Select the above members; notice that intellij highlights the members that depend on each-other in red. Also notice that we overlooked something; the accelerate() method currently uses fuel!
    3. Since a bike can accelerate as well we would like to retain this method for the bike class, but it will need a different implementation when we create that subclass
    => check the "keep abstract" box for this method and press refactor
